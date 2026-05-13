@@ -3,7 +3,7 @@
 # ============================================
 # ExtUp - Extension Upload Tester
 # Tool for automated file upload extension fuzzing
-# Author: Your Name
+# Author: Prodigium Academy
 # License: MIT
 # ============================================
 
