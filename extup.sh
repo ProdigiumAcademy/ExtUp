@@ -31,7 +31,7 @@ show_logo() {
 }
 
 # Configuração padrão
-WORDLIST="/usr/share/seclists/Fuzzing/extensions-most-common.txt"
+WORDLIST="/usr/share/wordlists/seclists/Fuzzing/extensions-most-common.fuzz.txt"
 BASE_URL=""
 URL_UPLOAD=""
 
@@ -41,15 +41,15 @@ show_help() {
     echo "Uso: $0 -u <URL_DO_UPLOADER> [-w <WORDLIST>] [-b <BASE_URL>] [-h]"
     echo ""
     echo "Opções:"
-    echo "  -u  URL do uploader (ex: http://192.168.9.117/internal/index.php)"
+    echo "  -u  URL do uploader (ex: http://192.168.1.111/internal/index.php)"
     echo "  -w  Caminho para wordlist de extensões (opcional)"
     echo "  -b  URL base onde os arquivos são salvos (opcional, tenta auto-detectar)"
     echo "  -h  Mostra esta ajuda"
     echo ""
     echo "Exemplos:"
-    echo "  $0 -u http://192.168.9.117/internal/index.php"
-    echo "  $0 -u http://192.168.9.117/internal/index.php -w /tmp/minha_lista.txt"
-    echo "  $0 -u http://192.168.9.117/internal/index.php -b http://192.168.9.117/internal/uploads/"
+    echo "  $0 -u http://192.168.1.111/internal/index.php"
+    echo "  $0 -u http://192.168.1.111/internal/index.php -w /tmp/minha_lista.txt"
+    echo "  $0 -u http://192.168.1.111/internal/index.php -b http://192.168.1.111/internal/uploads/"
     exit 0
 }
 
@@ -80,11 +80,11 @@ fi
 if [ ! -f "$WORDLIST" ]; then
     echo -e "${YELLOW}[!] Wordlist não encontrada: $WORDLIST${NC}"
     
-    if [ -f "/usr/share/seclists/Fuzzing/extensions-most-common.txt" ]; then
-        WORDLIST="/usr/share/seclists/Fuzzing/extensions-most-common.txt"
+    if [ -f "/usr/share/wordlists/seclists/Fuzzing/extensions-most-common.fuzz.txt" ]; then
+        WORDLIST="/usr/share/wordlists/seclists/Fuzzing/extensions-most-common.fuzz.txt"
         echo -e "${GREEN}[+] Usando wordlist padrão: $WORDLIST${NC}"
-    elif [ -f "/usr/share/wordlists/seclists/Fuzzing/extensions-most-common.txt" ]; then
-        WORDLIST="/usr/share/wordlists/seclists/Fuzzing/extensions-most-common.txt"
+    elif [ -f "/usr/share/wordlists/seclists/Fuzzing/extensions-most-common.fuzz.txt" ]; then
+        WORDLIST="/usr/share/wordlists/seclists/Fuzzing/extensions-most-common.fuzz.txt"
         echo -e "${GREEN}[+] Usando wordlist padrão: $WORDLIST${NC}"
     else
         echo -e "${RED}[!] Wordlist não encontrada. Por favor, instale o SecLists:${NC}"
