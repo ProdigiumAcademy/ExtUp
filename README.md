@@ -65,7 +65,7 @@ sudo apt install seclists -y
 ./extup.sh -u http://target.com/upload.php -b http://target.com/uploads/
 
 # 4. Using a SecLists wordlist
-./extup.sh -u http://target.com/index.php -w /usr/share/seclists/Fuzzing/extensions-most-common.txt
+./extup.sh -u http://target.com/index.php -w /usr/share/wordlists/seclists/Fuzzing/extensions-most-common.fuzz.txt
 ```
 
 ## 📊 Output example
@@ -80,7 +80,7 @@ sudo apt install seclists -y
            Extension Upload Tester v1.0
 
 [+] Target URL: http://192.168.9.117/internal/index.php
-[+] Wordlist: /usr/share/seclists/Fuzzing/extensions-most-common.txt
+[+] Wordlist: /usr/share/wordlists/seclists/Fuzzing/extensions-most-common.fuzz.txt
 [+] Base URL: http://192.168.9.117/internal/uploads/
 ===========================================================
 [*] Testing .php ... ❌ BLOCKED
@@ -106,7 +106,7 @@ sudo apt install seclists -y
 
 ## 🛠️ Recommended wordlists
 
-- SecLists: `/usr/share/seclists/Fuzzing/extensions-most-common.txt`
+- SecLists: `/usr/share/wordlists/seclists/Fuzzing/extensions-most-common.fuzz.txt`
 - Common extensions: `php phtml php3 php4 php5 php7 phps phtm asp aspx jsp`
 - Custom wordlist: create your own list with target-specific extensions
 
