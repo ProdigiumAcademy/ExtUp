@@ -6,6 +6,8 @@
 
 **ExtUp** is an automated tool for testing file extensions in vulnerable upload systems. It helps identify which extensions are accepted, whether the file is actually saved on the server, and whether PHP code is executed through a webshell.
 
+![ExtUp Logo](https://via.placeholder.com/800x200?text=ExtUp+Logo)
+
 ## 📋 About
 
 ExtUp was created to support security professionals during authorized penetration tests, CTFs, and lab environments. It automates the process of fuzzing file extensions in upload forms and provides a clear, organized report.
@@ -163,8 +165,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## ✉️ Contact
 
-Your Name - @yourtwitter - email@example.com
+Prodigium Academy
 
-Project link: https://github.com/your-username/extup
+Project link: https://github.com/ProdigiumAcademy/ExtUp
 
 ⭐️ If this project helped you, give it a star! ⭐️
